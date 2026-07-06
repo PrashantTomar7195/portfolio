@@ -1,0 +1,152 @@
+.loading-screen{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:radial-gradient(circle at top left,#1b1b45 0%,#0b1020 45%,#05060d 100%);
+    color:white;
+}
+
+.logo{
+
+    font-size:68px;
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+    background:linear-gradient(90deg,#8a5cff,#ff5ea8,#00d4ff);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:0px 0px 25px rgba(0,212,255,.25);
+}
+
+.tagline{
+
+    font-size:24px;
+
+    color:#d8d8d8;
+
+    margin-bottom:35px;
+
+    letter-spacing:.5px;
+}
+
+.progress-bar{
+
+    width:360px;
+
+    height:7px;
+
+    background:#2b2b2b;
+
+    border-radius:50px;
+
+    overflow:hidden;
+}
+
+.progress{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#8a5cff,#00d4ff);
+
+    transition:width .25s linear;
+}
+
+.percentage{
+
+    margin:18px 0;
+
+    font-size:30px;
+
+    font-weight:bold;
+}
+
+.enter-btn{
+
+    padding:15px 42px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#19b5ff;
+
+    color:white;
+
+    font-size:21px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.enter-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 30px rgba(0,191,255,.45);
+}
+.logo{
+    animation: fadeUp .8s ease;
+}
+
+.tagline{
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.enter-btn{
+    transition:0.3s;
+}
+
+.enter-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 35px rgba(0,191,255,.45);
+}
+.hero-image{
+    width:230px;
+    height:230px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 40px #38bdf8;
+    margin-bottom:30px;
+    animation:float 3s ease-in-out infinite;
+    transition:.4s;
+}
+
+.hero-image:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 45px #38bdf8;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
