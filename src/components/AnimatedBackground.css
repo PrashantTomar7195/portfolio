@@ -1,0 +1,98 @@
+.animated-bg{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(57,189,248,.10),transparent 35%),
+    radial-gradient(circle at 80% 30%,rgba(123,97,255,.10),transparent 35%),
+    radial-gradient(circle at 60% 80%,rgba(0,255,213,.08),transparent 30%),
+    #090b18;
+}
+
+.shape{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(70px);
+    opacity:.35;
+    animation:float 18s ease-in-out infinite;
+}
+
+.shape1{
+    width:260px;
+    height:260px;
+    background:#39bdf8;
+    left:5%;
+    top:8%;
+}
+
+.shape2{
+    width:180px;
+    height:180px;
+    background:#7b61ff;
+    right:8%;
+    top:15%;
+    animation-delay:2s;
+}
+
+.shape3{
+    width:150px;
+    height:150px;
+    background:#00ffd5;
+    left:20%;
+    bottom:12%;
+    animation-delay:4s;
+}
+
+.shape4{
+    width:320px;
+    height:320px;
+    background:#1d4ed8;
+    right:12%;
+    bottom:5%;
+    animation-delay:6s;
+}
+
+.shape5{
+    width:120px;
+    height:120px;
+    background:#ffffff;
+    left:48%;
+    top:38%;
+    animation-delay:8s;
+}
+
+.shape6{
+    width:220px;
+    height:220px;
+    background:#9333ea;
+    right:40%;
+    bottom:30%;
+    animation-delay:10s;
+}
+
+@keyframes float{
+
+0%{
+transform:translate(0,0) scale(1);
+}
+
+25%{
+transform:translate(35px,-50px) scale(1.1);
+}
+
+50%{
+transform:translate(-40px,30px) scale(.9);
+}
+
+75%{
+transform:translate(25px,-20px) scale(1.05);
+}
+
+100%{
+transform:translate(0,0) scale(1);
+}
+
+}

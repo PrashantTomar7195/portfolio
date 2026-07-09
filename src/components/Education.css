@@ -1,0 +1,178 @@
+.education{
+    padding:100px 10%;
+    background:#0d1020;
+    color:white;
+}
+
+.education h2{
+    text-align:center;
+    font-size:52px;
+    margin-bottom:70px;
+
+    background:linear-gradient(90deg,#7b61ff,#39bdf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.education-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:30px;
+}
+
+.education-card{
+
+    background:#171d35;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.education-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(90deg,#7b61ff,#39bdf8);
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(57,189,248,.25);
+
+}
+
+.edu-icon{
+
+    width:70px;
+    height:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#7b61ff,#39bdf8);
+
+    color:white;
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+}
+
+.education-card h3{
+
+    font-size:27px;
+
+    margin-bottom:15px;
+
+    line-height:1.4;
+
+}
+
+.education-card h4{
+
+    color:#39bdf8;
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+    line-height:1.6;
+
+}
+
+.education-card span{
+
+    color:#9db4ff;
+
+    display:block;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+}
+
+.education-card ul{
+
+    padding-left:18px;
+
+}
+
+.education-card li{
+
+    margin-bottom:12px;
+
+    color:#d7d7d7;
+
+    line-height:1.7;
+
+}
+
+@media(max-width:992px){
+
+.education{
+
+padding:90px 8%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.education{
+
+padding:80px 7%;
+
+}
+
+.education h2{
+
+font-size:42px;
+
+}
+
+.education-card{
+
+padding:28px;
+
+}
+
+.education-card h3{
+
+font-size:23px;
+
+}
+
+.education-card h4{
+
+font-size:18px;
+
+}
+
+}

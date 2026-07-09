@@ -1,41 +1,98 @@
 import "./Skills.css";
 
+import {
+  FaJava,
+  FaReact,
+  FaGithub,
+  FaDatabase,
+  FaNodeJs,
+  FaCode,
+} from "react-icons/fa";
+
+import {
+  SiSpringboot,
+  SiMysql,
+  SiPostman,
+} from "react-icons/si";
+
 function Skills() {
-  const skills = [
-    { name: "Java", level: 90 },
-    { name: "Spring Boot", level: 85 },
-    { name: "React", level: 80 },
-    { name: "JavaScript", level: 85 },
-    { name: "HTML", level: 95 },
-    { name: "CSS", level: 90 },
-    { name: "SQL", level: 85 },
-    { name: "MySQL", level: 85 },
-    { name: "Git & GitHub", level: 80 },
-    { name: "DSA", level: 80 },
+  const categories = [
+    {
+      title: "Programming Languages",
+      icon: <FaJava />,
+      desc: "Writing efficient and scalable applications using modern programming languages.",
+      skills: ["Java", "JavaScript", "SQL"],
+    },
+
+    {
+      title: "Frontend Development",
+      icon: <FaReact />,
+      desc: "Creating responsive and interactive user interfaces with modern web technologies.",
+      skills: ["React", "HTML5", "CSS3"],
+    },
+
+    {
+      title: "Backend Development",
+      icon: <FaNodeJs />,
+      desc: "Developing REST APIs and scalable backend services using Java & Node.js.",
+      skills: ["Spring Boot", "REST APIs", "Node.js"],
+    },
+
+    {
+      title: "Database",
+      icon: <FaDatabase />,
+      desc: "Managing relational databases and writing optimized SQL queries.",
+      skills: ["MySQL"],
+    },
+
+    {
+      title: "Tools & Platforms",
+      icon: <FaGithub />,
+      desc: "Using modern development tools for coding, testing and version control.",
+      skills: ["Git", "GitHub", "VS Code", "Postman"],
+    },
+
+    {
+      title: "Core Computer Science",
+      icon: <FaCode />,
+      desc: "Strong foundation in computer science fundamentals and problem solving.",
+      skills: ["DSA", "OOP", "DBMS", "Operating System"],
+    },
   ];
 
   return (
     <section className="skills" id="skills">
 
-      <h2>My Skills</h2>
+      <h2>Technical Skills</h2>
 
-      <div className="skills-container">
+      <p className="skills-subtitle">
+        Technologies and tools I use to build scalable, responsive and
+        high-quality software applications.
+      </p>
 
-        {skills.map((skill, index) => (
+      <div className="skills-grid">
 
-          <div className="skill-card" key={index}>
+        {categories.map((item, index) => (
 
-            <div className="skill-top">
-              <span>{skill.name}</span>
-              <span>{skill.level}%</span>
+          <div className="skill-box" key={index}>
+
+            <div className="skill-icon">
+              {item.icon}
             </div>
 
-            <div className="skill-bar">
+            <h3>{item.title}</h3>
 
-              <div
-                className="skill-progress"
-                style={{ width: `${skill.level}%` }}
-              ></div>
+            <p>{item.desc}</p>
+
+            <div className="skill-tags">
+
+              {item.skills.map((skill, i) => (
+
+                <span key={i}>
+                  {skill}
+                </span>
+
+              ))}
 
             </div>
 
